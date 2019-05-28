@@ -5,12 +5,7 @@ import pandas
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 
-def import_data_and_split():
-    # Import the dataset
-    data_set = pandas.read_csv('data.csv')
-    x_values = data_set.iloc[:, :-1].values
-    y_values = data_set.iloc[:, 1].values
-
+def split_data():
     # Split the dataset into the training set and test set
     # We're splitting the data in 1/3, so out of 30 rows, 20 rows will go into the training set,
     # and 10 rows will go into the testing set.
@@ -19,9 +14,16 @@ def import_data_and_split():
     return (x_train, x_test, y_train, y_test)
 
 
+def import_data():
+    # Import the dataset
+    data_set = pandas.read_csv('data.csv')
+    x_values = data_set.iloc[:, :-1].values
+    y_values = data_set.iloc[:, 1].values
+    return x_values, y_values
 
 if __name__ == '__main__':
-    x_train, x_test, y_train, y_test = import_data_and_split()
+    x_values, y_values = import_data()
+    x_train, x_test, y_train, y_test = split_data()
 
     # Creating a LinearRegression object and fitting it
     # on our trainging set.
