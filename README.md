@@ -42,9 +42,35 @@ zak will add stuff
 
 frido will add stuff
 
-## Optimizing ML Code
+## ML Code
 
-prasanth
+### Running the ML Code
+`python model.py`
+
+### Understand Data
+
+#### Data preview and dimentions
+
+`print(dataset.shape)`
+
+`print(dataset.dtypes)`
+
+`print(dataset.head(15))`
+
+#### Descriptive Statistics
+
+`print(dataset.describe())`
+
+#### Correlation
+
+`print(dataset.corr(method='pearson'))`
+
+#### Model accuracy
+
+`from sklearn import metrics`
+
+`print(metrics.mean_absolute_error(yPrediction, yTest))`
+
 
 ## Create a PR
 
