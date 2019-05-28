@@ -1,4 +1,3 @@
-# Import the necessary libraries
 import numpy as np
 import matplotlib.pyplot as plot
 import pandas
@@ -14,7 +13,6 @@ def split_data():
     return (x_train, x_test, y_train, y_test)
 
 def import_data():
-    # Import the dataset
     data_set = pandas.read_csv('data.csv')
     x_values = data_set.iloc[:, :-1].values
     y_values = data_set.iloc[:, 1].values
@@ -34,16 +32,10 @@ if __name__ == '__main__':
     x_values, y_values = import_data()
     x_train, x_test, y_train, y_test = split_data()
 
-    # Creating a LinearRegression object and fitting it
-    # on our trainging set.
     linear_regressor = LinearRegression()
     linear_regressor.fit(x_values, y_values)
 
-    # Predicting the test set results
     y_prediction = linear_regressor.predict(x_test)
 
-    # Visualising the training set results
     plot_data(x_train, y_train, linear_regressor, 'Salary vs Experince (Training set)')
-
-    # Visualising the test set results
     plot_data(x_test, y_test, linear_regressor, 'Salary vs Experince (Test set)')
