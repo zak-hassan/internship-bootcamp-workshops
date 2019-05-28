@@ -1,5 +1,20 @@
 # Workshop: Development and Coding Standards
 
+## Fork and clone
+
+As always you should first *fork* https://github.com/AICoE/workshop-coding-best-practices into your github account.
+Click on the `Fork` button in the upper right corner.
+
+Then *clone* your fork to your local machine. 
+
+**REPLACE <my_account_name> with your account name**
+
+`git clone git@github.com:<my_account_name>/workshop-coding-best-practices.git`
+
+If the above fails, make sure you have setup git correctly, for help see: https://help.github.com/en/articles/testing-your-ssh-connection
+
+Now you can `cd workshop-coding-best-practices` into your fork.
+
 ## Installation and execution the model code
 
 To manage python requirements we're using [Pipenv](https://github.com/pypa/pipenv#installation). On Fedora you should be
