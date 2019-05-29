@@ -82,6 +82,155 @@ you should remember.
 
 ## Data Science Perspective
 
+## 🤖 Bots
+
+Project [Thoth](https://github.com/thoth-station/) provides bots which simplify
+workflow for developers. This repository has already set up a bot which
+automatically performs tests on the source code each time a new pull request is
+opened. If you are interested in bot's configuration, take a look at
+[.zuul.yaml](https://github.com/AICoE/workshop-coding-best-practices/pull/4/files)
+configuration file which states two types of jobs performing checks -
+[Coala](https://coala.io/#/home) and [PyTest](https://docs.pytest.org/en/latest/).
+
+[PyTest](https://docs.pytest.org/en/latest/) is a framework for building
+unit-tests for your applications (Python has its own
+[unittest](https://docs.python.org/3/library/unittest.html) which is often
+sufficient enough but PyTest provides flexibility, extensibility and better user
+experience).
+
+---
+
+#### 🤓 Task 0: Prepare your development environment
+
+Before we run tests, let's clone this repository and prepare our virtual
+environment if you haven't done so run the following command (note
+the ``--dev`` flag which will install development dependencies):
+
+```bash
+pipenv install --dev
+```
+
+All tests are available under `tests/` directory - to run the test suite, you
+can issue the following command:
+
+```bash
+PYTHONPATH=. pipenv run python3 setup.py test
+```
+
+The ``PYTHONPATH`` directive tells the Python interpreter to consider importing
+from local directory to make our codebase importable in tests. Tests are
+executed in the virtual environment to guarantee presence of required
+development libraries (hence ``pipenv run ...``).
+
+If the command above looks too long for you, you can run a prepared script
+``test.sh`` which will in fact run the command above:
+
+```bash
+./test.sh
+```
+[GitHub link](https://github.com/AICoE/workshop-coding-best-practices/blob/master/test.sh)
+
+---
+#### 🤔 Task 1: Let's fix tests!
+
+After running commands above, your can see produced output stating each test
+and its success or failure with detailed description on what went wrong. Your
+real first task would be to fix test suite in a way it runs correctly (all the
+tests pass). As a starting point take a look into ``tests/test_generic.py``
+file which will help you understand how the testing framework works:
+
+```bash
+vim tests/test_generic.py
+```
+[GitHub link](https://github.com/AICoE/workshop-coding-best-practices/blob/master/tests/test_generic.py)
+
+Now, take a look at failing tests which verify if implementation of Fibonacci
+function returns correct results (hint: the actual implementation of ``fib()``
+function is implemented correctly, errors are in the test suite).
+
+```bash
+vim tests/test_module.py
+```
+[GitHub link](https://github.com/AICoE/workshop-coding-best-practices/blob/master/tests/test_module.py)
+
+The implementation of ``fib()`` function can be found at:
+
+```bash
+vim myproject/module.py
+```
+[GitHub link](https://github.com/AICoE/workshop-coding-best-practices/blob/master/myproject/module.py)
+
+---
+
+#### 😎 Task 3: Open a pull request fixing issues in the test suite and interact with the bot.
+
+Once you fix issues in the test suite, you can open a pull request. See how
+bots comment to your pull-requests and capture the output of test suite. This
+helps others verify your changes are correct, and also test changes in
+a reproducible environment against the current master branch.
+
+Make sure ``thoth-pytest`` is in successful state. You can check results of a run
+by clicking on "thoth-pytest", follow link "ara-report", click on "5 Tasks" in
+```pytest.yaml``` row and click on link in "Status column", raw "``thoth-pytest
+: run pytest``" (either successful or failed state).
+
+#### 📝 Some notes...
+
+* note that each file has it's header stating author and license - this helps you to know who is the module author so you can reach out to her/him directly in case of any issues
+
+* each file has a brief docstring describing what the module is used for - it helps others and your future self to immediately understand what's the purpose of the module
+
+* tests follow package/module structure - it helps others and your future self to quickly navigate in the project structure and relate sources
+
+* names of tests are based on function (the same would apply for method names) and stating what functionality they test so the output of the test suite is human readable
+
+* at the end of each test run you can see code coverage - how well is your code covered with tests (it does not measure the quality of test suite though!!!)
+
+---
+
+#### 🧚 Automatic management of package updates
+
+Thoth provides a bot called
+[Kebechet](https://github.com/thoth-station/kebechet/). It can manage your
+dependencies. If you work on a Python project which can benefit from package
+updates, feel free to use it (contact one of the thoth-station inhabitants
+present in ``AICoE - Thoth Station`` channel on Google Chat).
+
+Relevant info can be also found at [Thoth's
+page](http://thoth-station.ninja/kebechet/).
+
+---
+
+#### 🐨 Coala - check your sources
+
+Coala is a tool which can automatically check quality of sources - besides
+Python sources, it can also check other source types - for example YAML files.
+It comes with plugins called "Bears" which can be configured with paraneters. See
+[.coafile](https://github.com/AICoE/workshop-coding-best-practices/blob/master/.coafile)
+for configuration used in this repository and [Coala's homepage for more
+info](https://coala.io/).
+
+---
+
+#### 💾 Code formatting hints...
+
+To automatically format your code, you can use popular tool called
+[black](https://pypi.org/project/black/).
+
+You can install it using:
+
+```bash
+pip3 install black
+```
+
+Now you just run it and it will automatically format source code for you (note:
+some formatting changes might not be compatible with
+[PEP8](https://www.python.org/dev/peps/pep-0008/) and Coala might complain).:
+
+```bash
+black .  # Directory or path to a file to be formatted (dot for the current directory).
+```
+
 ### Running the ML Code
 `python model.py`
 

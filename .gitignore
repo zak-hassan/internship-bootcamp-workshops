@@ -1,3 +1,5 @@
+# Ignore files cached by Hypothesis...
+.hypothesis/*
 
 # Created by https://www.gitignore.io/api/python,pycharm,intellij,jupyternotebook
 
