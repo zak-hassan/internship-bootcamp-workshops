@@ -79,37 +79,47 @@ you should remember.
 
 [Solution](https://github.com/AICoE/workshop-coding-best-practices/commit/0127ea96ae8bd193c433b09672579fb39417e4d8)
 
-### 🐍 Zen of Python
 
-What happens if you run the following import in the Python interpreter?
+## Data Science Perspective
 
-```python
-import this
-```
+### Understand Data
 
-An easter egg shows up - [Zen of Python](https://www.python.org/dev/peps/pep-0020/):
+#### Preview Data
 
-```
-Beautiful is better than ugly.
-Explicit is better than implicit.
-Simple is better than complex.
-Complex is better than complicated.
-Flat is better than nested.
-Sparse is better than dense.
-Readability counts.
-Special cases aren't special enough to break the rules.
-Although practicality beats purity.
-Errors should never pass silently.
-Unless explicitly silenced.
-In the face of ambiguity, refuse the temptation to guess.
-There should be one-- and preferably only one --obvious way to do it.
-Although that way may not be obvious at first unless you're Dutch.
-Now is better than never.
-Although never is often better than *right* now.
-If the implementation is hard to explain, it's a bad idea.
-If the implementation is easy to explain, it may be a good idea.
-Namespaces are one honking great idea -- let's do more of those!
-```
+> It is always important to scan through the raw data to gain insights like the amount of data you are working with, understand data types or errors to see if any preprocessing is required, decide on how to split the data set for training and prediction etc., Here are some of the commands useful in previewing raw data. Try out the commands and observe what information is displayed.
+
+`print(dataset.shape)`
+
+`print(dataset.dtypes)`
+
+`print(dataset.head(15))`
+
+#### Descriptive Statistics
+
+> Descriptive statistics is a crucial step that helps you understand what the data is trying to tell you. Without descriptive statistics, you may miss valuable information that may eventually lead the model to provide incorrect conclusions. Try out the following command and observe the statistics displayed.
+
+`print(dataset.describe())`
+
+#### Correlation
+
+> In the model.py code, we have used linear regression to determine the linear relationship between the dependent and independent variable. But how did we know that there was any association between the variables in the data set before deciding on a dependent or independent variable. It is always recommended to use correlation to observe if there exists any association and if it exists, then progress to determining the linear relationship. Try out the following command to see the correlation matrix that shows the magnitude and direction of association between the variables.
+
+`print(dataset.corr(method='pearson'))`
+
+#### Model accuracy
+
+> Now that we have a model fitted to the data and performed prediction on the test data, it is important to evaluate the quality of this prediction. There are several metrics available to evaluate the accuracy of a predictive model. Try out the following command to view one such metric that shows the average error between the predicted and observed value.
+
+`from sklearn import metrics`
+
+`print(metrics.mean_absolute_error(yPrediction, yTest))`
+
+
+## Create a PR
+
+* create a PR to the original Repo
+* ask for a review by a peer
+
 
 ## 🤖 Bots
 
@@ -260,45 +270,39 @@ some formatting changes might not be compatible with
 black .  # Directory or path to a file to be formatted (dot for the current directory).
 ```
 
-## Data Science Perspective
-
-### Running the ML Code
-`python model.py`
-
-### Understand Data
-
-#### Data preview and dimentions
-
-`print(dataset.shape)`
-
-`print(dataset.dtypes)`
-
-`print(dataset.head(15))`
-
-#### Descriptive Statistics
-
-`print(dataset.describe())`
-
-#### Correlation
-
-`print(dataset.corr(method='pearson'))`
-
-#### Model accuracy
-
-`from sklearn import metrics`
-
-`print(metrics.mean_absolute_error(yPrediction, yTest))`
-
-
-## Create a PR
-
-* create a PR to the original Repo
-* ask for a review by a peer
-
 ## Profiling Code
 
 zak will add stuff
 
-## Bots
+### 🐍 Zen of Python
 
-frido will add stuff
+What happens if you run the following import in the Python interpreter?
+
+```python
+import this
+```
+
+An easter egg shows up - [Zen of Python](https://www.python.org/dev/peps/pep-0020/):
+
+```
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+```
+
