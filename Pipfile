@@ -4,12 +4,16 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+pytest = "*"
+hypothesis = "*"
 
 [packages]
 numpy = "*"
 matplotlib = "*"
 pandas = "*"
 sklearn = "*"
+pytest-timeout = "*"
+pytest-cov = "*"
 
 [requires]
 python_version = "3.6"
