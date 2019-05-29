@@ -80,15 +80,7 @@ you should remember.
 [Solution](https://github.com/AICoE/workshop-coding-best-practices/commit/0127ea96ae8bd193c433b09672579fb39417e4d8)
 
 
-## Profiling Code
-
-zak will add stuff
-
-## Bots
-
-frido will add stuff
-
-## ML Code
+## Data Science Perspective
 
 ### Running the ML Code
 `python model.py`
@@ -122,3 +114,11 @@ frido will add stuff
 
 * create a PR to the original Repo
 * ask for a review by a peer
+
+## Profiling Code
+
+zak will add stuff
+
+## Bots
+
+frido will add stuff
