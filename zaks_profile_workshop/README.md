@@ -5,6 +5,15 @@ Profiling should be an integral part of code development. It is a way to measure
 have well thought out designs. Know the runtime of your program when designing. Here is a review of sorting algorithms runtimes. We will be using sorting algoriths 
 in our examples
 
+
+#### Runtimes fastest to slowest
+Constant time – O(1)
+Linear time – O(n)
+Logarithmic time – O(log n)
+Linearithmic time – O(nlog n)
+Factorial time – O(n!)
+Quadratic time – O(n^)
+
 ### Runtimes Time and Space Complexity
 
 | Algorithm      | Best (Time) | Average (Time) | Worst (Time)   | Worst (Space) |
