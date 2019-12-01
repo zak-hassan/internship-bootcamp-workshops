@@ -69,11 +69,11 @@
         },
         "importlib-metadata": {
             "hashes": [
-                "sha256:aa18d7378b00b40847790e7c27e11673d7fed219354109d0e7b9e5b25dc3ad26",
-                "sha256:d5f18a79777f3aa179c145737780282e27b508fc8fd688cb17c7a813e8bd39af"
+                "sha256:a82ca8c109e194d7d6aee3f7531b0470dd4dd6b36ec14fd55087142a96bd55a7",
+                "sha256:f4a7ba72e93bc97ff491b66d69063819ae2b75238bb653cd4c95e3f2847ce76e"
             ],
             "markers": "python_version < '3.8'",
-            "version": "==0.23"
+            "version": "==1.0.0"
         },
         "joblib": {
             "hashes": [
@@ -145,10 +145,10 @@
         },
         "more-itertools": {
             "hashes": [
-                "sha256:409cd48d4db7052af495b09dec721011634af3753ae1ef92d2b32f73a745f832",
-                "sha256:92b8c4b06dac4f0611c0729b2f2ede52b2e1bac1ab48f089c7ddc12e26bb60c4"
+                "sha256:53ff73f186307d9c8ef17a9600309154a6ae27f25579e80af4db8f047ba14bc2",
+                "sha256:a0ea684c39bc4315ba7aae406596ef191fd84f873d2d2751f84d64e81a7a2d45"
             ],
-            "version": "==7.2.0"
+            "version": "==8.0.0"
         },
         "numpy": {
             "hashes": [
@@ -354,26 +354,26 @@
         },
         "hypothesis": {
             "hashes": [
-                "sha256:0cc788dbdc22ea1c28c6ee622a34cd4088b2f8d9c096b20a586bbf64733f7de1",
-                "sha256:c50157747f80930c0e9367a2ef10599204cc098007e18ba8daeac0620ee674cb"
+                "sha256:568525e69b395d425472e57abb3cf1b7af7e7aa15b11d90c75560927e1821ea1",
+                "sha256:fe2618f548d66346cfd1da8685f627b4d9a2fb889b7293c8b90f8db929eace68"
             ],
             "index": "pypi",
-            "version": "==4.50.2"
+            "version": "==4.50.3"
         },
         "importlib-metadata": {
             "hashes": [
-                "sha256:aa18d7378b00b40847790e7c27e11673d7fed219354109d0e7b9e5b25dc3ad26",
-                "sha256:d5f18a79777f3aa179c145737780282e27b508fc8fd688cb17c7a813e8bd39af"
+                "sha256:a82ca8c109e194d7d6aee3f7531b0470dd4dd6b36ec14fd55087142a96bd55a7",
+                "sha256:f4a7ba72e93bc97ff491b66d69063819ae2b75238bb653cd4c95e3f2847ce76e"
             ],
             "markers": "python_version < '3.8'",
-            "version": "==0.23"
+            "version": "==1.0.0"
         },
         "more-itertools": {
             "hashes": [
-                "sha256:409cd48d4db7052af495b09dec721011634af3753ae1ef92d2b32f73a745f832",
-                "sha256:92b8c4b06dac4f0611c0729b2f2ede52b2e1bac1ab48f089c7ddc12e26bb60c4"
+                "sha256:53ff73f186307d9c8ef17a9600309154a6ae27f25579e80af4db8f047ba14bc2",
+                "sha256:a0ea684c39bc4315ba7aae406596ef191fd84f873d2d2751f84d64e81a7a2d45"
             ],
-            "version": "==7.2.0"
+            "version": "==8.0.0"
         },
         "packaging": {
             "hashes": [
