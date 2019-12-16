@@ -358,11 +358,11 @@
         },
         "hypothesis": {
             "hashes": [
-                "sha256:389f2f1eb798c0b774321b048139b677462da4d989cd705a277364861b855df9",
-                "sha256:7bdfb76a52e90f5367306cfe955dfdab28f9edbe5555296904cee686704babbf"
+                "sha256:1a8bde9f8f2d782e7b927fe5da8d432fd3f06c71984c2da7e828e0150932712e",
+                "sha256:b6c00000ad8bc2346717196ebc47a99ea6412dfd7c307f76345dda5de3af1897"
             ],
             "index": "pypi",
-            "version": "==4.54.2"
+            "version": "==4.55.0"
         },
         "importlib-metadata": {
             "hashes": [
@@ -420,6 +420,13 @@
                 "sha256:30f610279e8b2578cab6db20741130331735c781b56053c59c4076da27f06b66"
             ],
             "version": "==1.13.0"
+        },
+        "sortedcontainers": {
+            "hashes": [
+                "sha256:974e9a32f56b17c1bac2aebd9dcf197f3eb9cd30553c5852a3187ad162e1a03a",
+                "sha256:d9e96492dd51fae31e60837736b38fe42a187b5404c16606ff7ee7cd582d4c60"
+            ],
+            "version": "==2.1.0"
         },
         "wcwidth": {
             "hashes": [
