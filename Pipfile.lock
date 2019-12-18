@@ -358,11 +358,11 @@
         },
         "hypothesis": {
             "hashes": [
-                "sha256:a4a1dd2e90cc598e833c685746359670d0982137d7f539919ba8b2c9145c702e",
-                "sha256:e45236d8b6db4833b6cf5b9fc550ed005cb140d4960eb56d65aedecd9553d00f"
+                "sha256:0b54ee72a48f3b6f9df0adcd66abd9b4d22c4c555fa7628936822ee0aca7aa4b",
+                "sha256:1d465d57cd07b5bcbf7edfac4dbf5ef23271baad6d4bc531a9720c9682566076"
             ],
             "index": "pypi",
-            "version": "==4.55.4"
+            "version": "==4.56.0"
         },
         "importlib-metadata": {
             "hashes": [
