@@ -27,9 +27,9 @@ def fib(n: int) -> int:
     """
     if n <= 0:
         raise ValueError("Number has to be positive")
-    elif n == 1: 
+    elif n == 1:
         return 0
-    elif n == 2: 
+    elif n == 2:
         return 1
 
     # TODO: we need to rewrite this not to use recursion. Why is recursion wrong? What will happen for large numbers?
